@@ -3,7 +3,9 @@ package org.example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CalculatorTest {
 
@@ -70,5 +72,30 @@ class CalculatorTest {
                 () -> calculator.divide(10, 0),
                 "Division by zero is invalid");
         assertEquals("Cannot divide by zero", exception.getMessage());
+    }
+
+    @Test
+    void evenValueReturnsTrue() {
+        assertTrue(calculator.isEven(2), "2 is even");
+    }
+
+    @Test
+    void zeroIsEven() {
+        assertTrue(calculator.isEven(0), "0 is even");
+    }
+
+    @Test
+    void negativeEvenValueReturnsTrue() {
+        assertTrue(calculator.isEven(-4), "-4 is even");
+    }
+
+    @Test
+    void oddValueReturnsFalse() {
+        assertFalse(calculator.isEven(3), "3 is odd");
+    }
+
+    @Test
+    void negativeOddValueReturnsFalse() {
+        assertFalse(calculator.isEven(-5), "-5 is odd");
     }
 }

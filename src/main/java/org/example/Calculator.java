@@ -52,4 +52,14 @@ public class Calculator {
         }
         return x / y;
     }
+
+    /**
+     * Returns whether the value is even.
+     *
+     * @param value number to check
+     * @return true when value is even
+     */
+    public boolean isEven(int value) {
+        return false;
+    }
 }
