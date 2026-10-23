@@ -39,13 +39,17 @@ public class Calculator {
     }
 
     /**
-     * Returns the integer quotient of two integers.
+     * Returns the integer quotient of two integers. The result is truncated toward zero.
      *
      * @param x dividend
      * @param y divisor
      * @return x / y
+     * @throws ArithmeticException if y is zero
      */
     public int divide(int x, int y) {
-        return Integer.MIN_VALUE;
+        if (y == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return x / y;
     }
 }
