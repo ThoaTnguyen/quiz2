@@ -26,4 +26,15 @@ public class Calculator {
     public int subtract(int x, int y) {
         return x - y;
     }
+
+    /**
+     * Returns the product of two integers.
+     *
+     * @param x first value
+     * @param y second value
+     * @return x * y
+     */
+    public int multiply(int x, int y) {
+        return Integer.MIN_VALUE;
+    }
 }

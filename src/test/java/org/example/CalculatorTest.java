@@ -32,4 +32,19 @@ class CalculatorTest {
     void subtractNegativeResult() {
         assertEquals(-5, calculator.subtract(2, 7), "2 - 7");
     }
+
+    @Test
+    void multiplyPositiveNumbers() {
+        assertEquals(12, calculator.multiply(4, 3), "4 * 3");
+    }
+
+    @Test
+    void multiplyNegativeNumber() {
+        assertEquals(-6, calculator.multiply(-2, 3), "-2 * 3");
+    }
+
+    @Test
+    void multiplyByZero() {
+        assertEquals(0, calculator.multiply(5, 0), "5 * 0");
+    }
 }
