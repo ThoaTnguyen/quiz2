@@ -22,4 +22,14 @@ class CalculatorTest {
     void sumWithZero() {
         assertEquals(0, calculator.sum(-2, 2), "-2 + 2");
     }
+
+    @Test
+    void subtractPositiveResult() {
+        assertEquals(5, calculator.subtract(9, 4), "9 - 4");
+    }
+
+    @Test
+    void subtractNegativeResult() {
+        assertEquals(-5, calculator.subtract(2, 7), "2 - 7");
+    }
 }

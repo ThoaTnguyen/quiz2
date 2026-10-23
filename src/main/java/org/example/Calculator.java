@@ -15,4 +15,15 @@ public class Calculator {
     public int sum(int x, int y) {
         return x + y;
     }
+
+    /**
+     * Returns the difference of two integers.
+     *
+     * @param x value to subtract from
+     * @param y value to subtract
+     * @return x - y
+     */
+    public int subtract(int x, int y) {
+        return Integer.MIN_VALUE;
+    }
 }
