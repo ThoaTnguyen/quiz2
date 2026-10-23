@@ -3,6 +3,7 @@ package org.example;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculatorTest {
 
@@ -46,5 +47,28 @@ class CalculatorTest {
     @Test
     void multiplyByZero() {
         assertEquals(0, calculator.multiply(5, 0), "5 * 0");
+    }
+
+    @Test
+    void dividePositiveNumbers() {
+        assertEquals(5, calculator.divide(10, 2), "10 / 2");
+    }
+
+    @Test
+    void divideTruncatesTowardZero() {
+        assertEquals(2, calculator.divide(7, 3), "7 / 3");
+    }
+
+    @Test
+    void divideNegativeNumber() {
+        assertEquals(-4, calculator.divide(-8, 2), "-8 / 2");
+    }
+
+    @Test
+    void divideByZeroThrows() {
+        Exception exception = assertThrows(ArithmeticException.class,
+                () -> calculator.divide(10, 0),
+                "Division by zero is invalid");
+        assertEquals("Cannot divide by zero", exception.getMessage());
     }
 }

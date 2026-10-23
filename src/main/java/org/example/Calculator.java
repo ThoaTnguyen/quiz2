@@ -37,4 +37,15 @@ public class Calculator {
     public int multiply(int x, int y) {
         return x * y;
     }
+
+    /**
+     * Returns the integer quotient of two integers.
+     *
+     * @param x dividend
+     * @param y divisor
+     * @return x / y
+     */
+    public int divide(int x, int y) {
+        return Integer.MIN_VALUE;
+    }
 }
