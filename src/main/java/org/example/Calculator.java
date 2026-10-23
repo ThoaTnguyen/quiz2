@@ -60,6 +60,6 @@ public class Calculator {
      * @return true when value is even
      */
     public boolean isEven(int value) {
-        return false;
+        return value % 2 == 0;
     }
 }
