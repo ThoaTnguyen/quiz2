@@ -12,6 +12,6 @@ public class DateChecker {
      * @return true when the month has 31 days
      */
     public boolean has31Days(Month month) {
-        return false;
+        return true;
     }
 }
