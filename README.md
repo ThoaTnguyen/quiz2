@@ -1,6 +1,6 @@
 # Quiz 2
 
-Maven project for a JUnit 5 test-driven development exercise, using the same setup as the Lecture 16 walkthrough: Java 14 and JUnit Jupiter 5.10.2. 
+Maven project for a JUnit 5 test-driven development exercise, using the same setup as the Lecture 16 walkthrough: Java 14 and JUnit Jupiter 5.10.2.
 
 ## Layout
 
